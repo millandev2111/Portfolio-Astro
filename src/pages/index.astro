@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro'
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHub from '../icons/GitHub.astro';
+import Linkedin from '../icons/Linkedin.astro';
+import Mail from '../icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import Suitcase from '../icons/Suitcase.astro';
+import Code from '../icons/Code.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Portafolio de Millandev - Diseñador y Programador Web." description=''>
+	<main class="px-4">
+		<Container class="py-44 pb-32">
+			<img src="/Foto-millandev-fondo.webp" alt="Millandev foto" class="size-28 rounded-full mb-4">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row pb-6 lg:pb-10 gap-x-4">Hey, soy MillanDev 
+			<a 
+			href="https://github.com/millandev2111"
+			target="_blank"
+			rel="noopener"
+			class="flex items-center justify-center">
+				<Badge>Disponible para trabajar</Badge>
+			</a>
+		</h1>
+		<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"> <span> +2 años de experiencias. </span> <span class="text-violet-400/90"> Desarrollador web y Diseñador UX/UI. </span> <span class="text-violet-200/90"> De Cali, Colombia. </span> <span class="opacity-75"> Especializado en dar soluciones llamativas y visuales sin sacrificar el rendimiento. </span></h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://github.com/millandev2111">
+					<GitHub class="size-4 md:size-7" /> GitHub
+				</SocialPill>
+				<SocialPill href="#">
+					<Linkedin class="size-4 md:size-7" /> Linkedin
+				</SocialPill>
+				<SocialPill href="mailto:millandev2111@gmail.com">
+					<Mail class="size-4 md:size-7" /> millandev2111@gmail.com
+				</SocialPill>
+			</nav>
+		</Container>
+
+		<Container id="experience" >
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> <Suitcase class="size-7 " /> Experiencia laboral</h2>
+			<Experience/>
+		</Container>
+
+		<Container id="projects" >
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> <Code class="size-7 " /> Proyectos</h2>
+			<Projects/>
+		</Container>
+	</main>
+</Layout>
+
+<style></style>

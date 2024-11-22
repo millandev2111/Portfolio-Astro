@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Actualmente...',
+        title: 'Nextone',
+        description: 'Ahora mismo me encuentro desarrollando un proyecto personal sobre una pagina de artistas emergentes.',
+        link: 'https://github.com/millandev2111/Nextone'
+    },
+    {
+        date: 'Desde el 2023',
+        title: 'Trabajos de diseño UX/UI',
+        description: 'Siempre me ha encantado el diseño y creo firmemente que el diseño no solo debe resolver problemas, sino también inspirar y emocionar. Tengo experiencia realizando trabajos finales a diferentes personas dentro y fuera del ambito universitario, usando principalmente Figma, aun que tambien he usado herramientas como Webflow',
+    },
+    {
+        date: 'Desde el 2022',
+        title: 'Frontend Developer',
+        description: 'Siempre me ha apasionado el diseño web y me emociona el poderlo llevar a la vida real de una manera llamativa y funcional, he tenido experiencia como freelancer y en la universidad en un ambiente colaborativo para desarrollar software.',
+    },
+
+]
+---
+
+
+<ol class="relative border-s border-violet-500 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }                  
+</ol>
+
+  
+
+      

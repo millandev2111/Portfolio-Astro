@@ -1,0 +1,124 @@
+---
+import Nextjs from "../icons/Nextjs.astro"
+import Tailwind from "../icons/Tailwind.astro"
+import React from "../icons/React.astro"
+import AstroIcon from "../icons/AstroIcon.astro"
+import Svelt from "../icons/Svelt.astro"
+import JavaScript from "../icons/JavaScript.astro"
+import HTML from "../icons/HTML.astro"
+import Sass from "../icons/Sass.astro"
+import GitHub from "../icons/GitHub.astro"
+
+const TAGS = {
+    NEXT: {
+        name: 'Next.js',
+        class: 'bg-black text-white',
+        icon: Nextjs,
+    },
+    TAILWIND: {
+        name: 'Tailwind CSS',
+        class: 'bg-[#003159] text-white',
+        icon: Tailwind,
+    },
+    REACT: {
+        name: 'React',
+        class: 'bg-[#018198] text-white',
+        icon: React,
+    },
+    ASTRO: {
+        name: 'Astro',
+        class: 'bg-[#964600] text-white',
+        icon: AstroIcon,
+    },
+    SVELT: {
+        name: 'Svelt',
+        class: 'bg-[#ff7b52] text-white',
+        icon: Svelt,
+    },
+    JAVASCRIPT: {
+        name: 'JavaScrips',
+        class: 'bg-[#a99510] text-white',
+        icon: JavaScript,
+    },
+    HTML: {
+        name: 'HTML5',
+        class: 'bg-[#932f08] text-white',
+        icon: HTML,
+    },
+    SASS: {
+        name: 'Sass',
+        class: 'bg-[#870044] text-white',
+        icon: Sass,
+    },
+}
+
+const PROJECTS = [
+    {
+        title: 'Spotify Clone',
+        description: 'Clone de Spotify realizado con Astro usando tecnologias como React, Svelt y Tailwind',
+        link: '#',
+        github: 'https://github.com/millandev2111/Spotify-Clone',
+        image: '/projects/SpotifyClone.webp',
+        tags: [TAGS.TAILWIND, TAGS.REACT, TAGS.SVELT, TAGS.ASTRO,]
+    },
+    {
+        title: 'Pokedex',
+        description: 'Pokedex hecha en React, la cual hace llamadas a PokeApi',
+        link: '#',
+        github: 'https://github.com/millandev2111/Pokedex-React',
+        image: '/projects/Pokedex.webp',
+        tags: [TAGS.SASS, TAGS.REACT]
+    },
+    {
+        title: 'Chat con ia',
+        description: 'Chat con LLM por medio de un repositorio de github, 100% Vanilla js',
+        link: '#',
+        github: 'https://github.com/millandev2111/Chat-IA',
+        image: '/projects/ChatConIa.webp',
+        tags: [TAGS.HTML, TAGS.JAVASCRIPT]
+    },
+    {
+        title: 'Twitter Clone',
+        description: 'Este es un clon de twitter que imita la funcionalidad de sus post, se realizo con supabase la parte de la autenticacion y manejo de los tweets, tambien se uso GitHub como un provider para la autenticacion.',
+        link: '#',
+        github: 'https://github.com/millandev2111/Twitter-clone',
+        image: '/projects/TwitterClon.webp',
+        tags: [TAGS.TAILWIND, TAGS.NEXT]
+    },
+]
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image, github }) => (
+        <article class="relative mb-14">
+            <h3 class="text-2xl font-semibold text-violet-400/90 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex flex-row gap-x-2 mb-2 gap-2 flex-wrap">
+                {
+                    tags.map((tag) => (
+                        <li>
+                            <span class={`flex gap-x-1 rounded-full text-sm ${tag.class} py-1 px-3 items-center justify-center`}>
+                                <tag.icon class="size-7" />
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+            <div class="relative group">
+                <img 
+                    class="rounded shadow-2xl shadow-white/10" 
+                    src={image} 
+                    alt={`captura de pantalla ${title}`} 
+                />
+                <a 
+                    href={github} 
+                    target="_blank" 
+                    class="absolute inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"
+                >
+                    <GitHub class="size-20"/>
+                </a>
+            </div>
+        </article>
+    ))
+}
