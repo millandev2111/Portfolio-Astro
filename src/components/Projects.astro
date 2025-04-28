@@ -8,6 +8,10 @@ import JavaScript from "../icons/JavaScript.astro"
 import HTML from "../icons/HTML.astro"
 import Sass from "../icons/Sass.astro"
 import GitHub from "../icons/GitHub.astro"
+import Typescript from "../icons/Typescript.astro"
+import Strapi from "../icons/Strapi.astro"
+import Postgres from "../icons/Postgres.astro"
+import Prisma from "../icons/Prisma.astro"
 
 const TAGS = {
     NEXT: {
@@ -50,9 +54,45 @@ const TAGS = {
         class: 'bg-[#870044] text-white',
         icon: Sass,
     },
+    TYPESCRIT: {
+        name: 'Typescript',
+        class: 'bg-[#2f495d] text-white',
+        icon: Typescript,
+    },
+    STRAPI: {
+        name: 'Strapi',
+        class: 'bg-[#282684] text-white',
+        icon: Strapi,
+    },
+    POSTGRES: {
+        name: 'PostgresSQL',
+        class: 'bg-[#003159] text-white',
+        icon: Postgres,
+    },
+    PRISMA: {
+        name: 'Prisma',
+        class: 'bg-[#000000] text-white',
+        icon: Prisma,
+    },
 }
 
 const PROJECTS = [
+    {
+        title: 'Dashboard Empresarial',
+        description: 'Dashboard empresarial con capacidad para ver informacion de la empresa de una manera mas visual y tenes un control de los socios y sus pagos, se realizo con Next.js y Tailwind CSS, la parte de la autenticacion se realizo con Clerck.',
+        link: '#',
+        github: '/',
+        image: '/projects/DashboardEmpresarial.webp',
+        tags: [TAGS.TAILWIND, TAGS.NEXT, TAGS.TYPESCRIT, TAGS.PRISMA]
+    },
+    {
+        title: 'Ecommerce',
+        description: 'Ecommerce realizado con Next.js y Strapi como CMS, la base de datos es PostgresSQL, el frontend esta hecho en Next.js y Tailwind CSS.',
+        link: '#',
+        github: '/',
+        image: '/projects/EcommerceStrapi.webp',
+        tags: [TAGS.TAILWIND, TAGS.NEXT, TAGS.TYPESCRIT, TAGS.STRAPI, TAGS.POSTGRES]
+    },
     {
         title: 'Spotify Clone',
         description: 'Clone de Spotify realizado con Astro usando tecnologias como React, Svelt y Tailwind',
@@ -97,7 +137,7 @@ const PROJECTS = [
                 {
                     tags.map((tag) => (
                         <li>
-                            <span class={`flex gap-x-1 rounded-full text-sm ${tag.class} py-1 px-3 items-center justify-center`}>
+                            <span class={`flex gap-x-1 rounded-full text-sm ${tag.class} py-[6px] px-4 items-center justify-center`}>
                                 <tag.icon class="size-7" />
                                 {tag.name}
                             </span>
