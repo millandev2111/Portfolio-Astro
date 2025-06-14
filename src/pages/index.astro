@@ -12,44 +12,113 @@ import Code from '../icons/Code.astro';
 import Projects from '../components/Projects.astro';
 ---
 
-<Layout title="Portafolio de Millandev - Diseñador y Programador Web." description=''>
-	<main class="px-4">
-		<Container class="py-44 pb-32">
-			<img src="/Foto-millandev-fondo.webp" alt="Millandev foto" class="size-28 rounded-full mb-4">
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row pb-6 lg:pb-10 gap-x-4">Hey, soy MillanDev 
-			<a 
-			href="https://github.com/millandev2111"
-			target="_blank"
-			rel="noopener"
-			class="flex items-center justify-center">
-				<Badge>Disponible para trabajar</Badge>
-			</a>
-		</h1>
-		<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"> <span> +1 años de experiencia. </span> <span class="text-violet-400/90"> Desarrollador web y Diseñador UX/UI. </span> <span class="text-violet-200/90"> De Cali, Colombia. </span> <span class="opacity-75"> Especializado en dar soluciones llamativas y visuales. </span></h2>
+<Layout title="MillanDev Portfolio - Web Designer & Developer" description=''>
+	<main class="px-4 relative">
+		<!-- Hero Section -->
+		<Container class="py-44 pb-32 relative">
+			<!-- Decorative elements -->
+			<div class="absolute top-20 left-10 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+			<div class="absolute top-40 right-20 w-24 h-24 bg-violet-400/10 rounded-full blur-2xl animate-pulse delay-700"></div>
+			
+			<!-- Profile Image with futuristic frame -->
+			<div class="relative mb-8 group w-28 h-28">
+    		<div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+    		<div class="relative w-full h-full bg-gradient-to-br from-purple-900/50 to-violet-900/50 p-1 rounded-full backdrop-blur-sm border border-purple-500/30">
+        	<img 
+            src="/Foto-millandev-fondo.webp" 
+            alt="MillanDev photo" 
+            class="w-full h-full rounded-full border-2 border-purple-400/20 transition-transform duration-300 group-hover:scale-105 object-cover"
+        	>
+    			</div>
+				</div>
+				<!-- Floating particles -->
+				<div class="absolute -top-2 -right-2 w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
+				<div class="absolute -bottom-2 -left-2 w-2 h-2 bg-violet-300 rounded-full animate-ping delay-1000"></div>
+			</div>
 
+			<!-- Main Title with neon effect -->
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-col lg:flex-row pb-6 lg:pb-10 gap-4 lg:gap-x-4 items-start lg:items-center">
+				<span class="bg-gradient-to-r from-white via-purple-200 to-violet-300 bg-clip-text text-transparent drop-shadow-2xl">
+					Hey, I'm MillanDev
+				</span>
+				<a 
+					href="https://github.com/millandev2111"
+					target="_blank"
+					rel="noopener"
+					class="flex items-center justify-center transform hover:scale-105 transition-all duration-300 hover:rotate-1"
+				>
+					<Badge>Available for work</Badge>
+				</a>
+			</h1>
+
+			<!-- Description with gradient text -->
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] leading-relaxed"> 
+				<span class="text-gray-200 font-medium">+1 years of experience.</span> 
+				<span class="text-transparent bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text font-semibold">Web Developer and UX/UI Designer.</span> 
+				<span class="text-transparent bg-gradient-to-r from-violet-300 to-purple-300 bg-clip-text">From Cali, Colombia.</span> 
+				<span class="text-gray-300/80">Specialized in creating striking and visual solutions.</span>
+			</h2>
+
+			<!-- Social Links with enhanced styling -->
 			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://github.com/millandev2111">
-					<GitHub class="size-4 md:size-7" /> GitHub
-				</SocialPill>
-				<SocialPill href="#">
-					<Linkedin class="size-4 md:size-7" /> Linkedin
-				</SocialPill>
-				<SocialPill href="mailto:millandev2111@gmail.com">
-					<Mail class="size-4 md:size-7" /> millandev2111@gmail.com
-				</SocialPill>
+				<div class="transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
+					<SocialPill href="https://github.com/millandev2111">
+						<GitHub class="size-4 md:size-7" /> GitHub
+					</SocialPill>
+				</div>
+				<div class="transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:rotate-1">
+					<SocialPill href="#">
+						<Linkedin class="size-4 md:size-7" /> LinkedIn
+					</SocialPill>
+				</div>
+				<div class="transform hover:scale-105 transition-all duration-300 hover:-translate-y-1 hover:-rotate-1">
+					<SocialPill href="mailto:millandev2111@gmail.com">
+						<Mail class="size-4 md:size-7" /> millandev2111@gmail.com
+					</SocialPill>
+				</div>
 			</nav>
 		</Container>
 
-		<Container id="experience" >
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> <Suitcase class="size-7 " /> Experiencia laboral</h2>
-			<Experience/>
+		<!-- Experience Section -->
+		<Container id="experience" class="relative">
+			<!-- Background glow effect -->
+			<div class="absolute inset-0 bg-gradient-to-r from-purple-900/5 to-violet-900/5 rounded-3xl blur-3xl"></div>
+			
+			<div class="relative">
+				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center group">
+					<div class="p-2 bg-gradient-to-br from-purple-600/20 to-violet-600/20 rounded-lg border border-purple-500/30 backdrop-blur-sm group-hover:from-purple-600/30 group-hover:to-violet-600/30 transition-all duration-300">
+						<Suitcase class="size-7 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+					</div>
+					<span class="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+						Work Experience
+					</span>
+				</h2>
+				<Experience/>
+			</div>
 		</Container>
 
-		<Container id="projects" >
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"> <Code class="size-7 " /> Proyectos</h2>
-			<Projects/>
+		<!-- Projects Section -->
+		<Container id="projects" class="relative">
+			<!-- Background glow effect -->
+			<div class="absolute inset-0 bg-gradient-to-l from-violet-900/5 to-purple-900/5 rounded-3xl blur-3xl"></div>
+			
+			<div class="relative">
+				<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center group">
+					<div class="p-2 bg-gradient-to-br from-violet-600/20 to-purple-600/20 rounded-lg border border-violet-500/30 backdrop-blur-sm group-hover:from-violet-600/30 group-hover:to-purple-600/30 transition-all duration-300">
+						<Code class="size-7 text-violet-400 group-hover:text-violet-300 transition-colors duration-300" />
+					</div>
+					<span class="bg-gradient-to-r from-white to-violet-200 bg-clip-text text-transparent">
+						Projects
+					</span>
+				</h2>
+				<Projects/>
+			</div>
 		</Container>
+
+		<!-- Floating decoration elements -->
+		<div class="fixed top-1/4 left-4 w-1 h-20 bg-gradient-to-b from-purple-600/30 to-transparent rounded-full animate-pulse"></div>
+		<div class="fixed top-1/2 right-4 w-1 h-16 bg-gradient-to-b from-violet-600/30 to-transparent rounded-full animate-pulse delay-500"></div>
+		<div class="fixed bottom-1/4 left-8 w-2 h-2 bg-purple-400/50 rounded-full animate-ping"></div>
+		<div class="fixed bottom-1/3 right-8 w-1.5 h-1.5 bg-violet-400/50 rounded-full animate-ping delay-1000"></div>
 	</main>
 </Layout>
-
-<style></style>
