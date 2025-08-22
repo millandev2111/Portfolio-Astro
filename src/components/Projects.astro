@@ -12,6 +12,7 @@ import Typescript from "../icons/Typescript.astro"
 import Strapi from "../icons/Strapi.astro"
 import Postgres from "../icons/Postgres.astro"
 import Prisma from "../icons/Prisma.astro"
+import Python from "../icons/Python.astro"
 
 const TAGS = {
     NEXT: {
@@ -74,9 +75,27 @@ const TAGS = {
         class: 'bg-gradient-to-r from-gray-900/80 to-purple-900/80 text-white border border-gray-500/30 shadow-lg shadow-gray-500/20 hover:shadow-gray-400/40 hover:border-gray-400/50',
         icon: Prisma,
     },
+    PYTHON: {
+        name: 'Python',
+        class: 'bg-gradient-to-r from-gray-900/80 to-purple-900/80 text-white border border-gray-500/30 shadow-lg shadow-gray-500/20 hover:shadow-gray-400/40 hover:border-gray-400/50',
+        icon: Python,
+    },
+    ORACLE: { //esta en proceso
+        name: 'Python',
+        class: 'bg-gradient-to-r from-gray-900/80 to-purple-900/80 text-white border border-gray-500/30 shadow-lg shadow-gray-500/20 hover:shadow-gray-400/40 hover:border-gray-400/50',
+        icon: Python,
+    },
 }
 
 const PROJECTS = [
+    {
+        title: 'Siddec Control de Cupos',
+        description: 'This software was developed for the company Siddec to manage vehicle quotas per unit using a UHF reader to automate the entry and exit of registered vehicles.',
+        link: '#',
+        github: '#',
+        image: '/projects/CuposParaUnidadSiddecc.webp',
+        tags: [TAGS.TAILWIND, TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.PYTHON ]
+    },
     {
         title: 'Formulario ISO27001',
         description: "This is a form to evaluate the compliance of the ISO27001 standard, it is evaluated by means of audits and the standard's own controllers, and the idea is to audit different companies to know how aligned they are with this standard, it was decided to use Strapi for its ease when adding and managing content, i.e. you can add other controllers for other standards, “Click on the image.",
@@ -143,6 +162,7 @@ const PROJECTS = [
     },
 ]
 ---
+
 
 <style>
     .project-card {
